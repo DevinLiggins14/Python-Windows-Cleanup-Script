@@ -5,7 +5,7 @@ This project demonstrates a Python script designed to clean up unnecessary and j
 <br />
 <br/> 
 <br/>
-<img src=""/>
+<img src="https://github.com/user-attachments/assets/fc440a7f-d472-4f02-a3ec-3de0ac0e7a84"/>
 <br/>  <br/>
 
 ### **Prerequisites**  
@@ -121,8 +121,69 @@ def clean_junk_files(directory, file_extensions):
 ```
 <br/> I updated the line if file.endswith(file_extensions) to if file.endswith(tuple(file_extensions)). This converts the list of extensions to a tuple, which is what endswith() expects. I also updated the line file_path = os.path.join(directory, file) to file_path = os.path.join(root, file) so the full file path is correctly generated. The root variable provides the correct path for each file found during the os.walk() traversal. <br/>
 <br/>  Now I will run the updated script and test it again <br/>
-<img src=""/>
-<img src=""/>
+
+
+<img src="https://github.com/user-attachments/assets/1b03ed2b-119c-4f8f-b8cc-33b1b06ba6dc"/>
+<br/> The script failed due to handling file extensions and now a syntax error. Will troubleshoot <br/>
+
+```py
+import os
+import logging
+
+# Configure logging
+logging.basicConfig(
+    filename="cleanup_log.txt",
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+def clean_junk_files(directory, file_extensions):
+    """
+    Identify and delete junk files in the specified directory.
+    
+    Args:
+        directory (str): Path to the directory containing junk files.
+        file_extensions (list): List of file extensions to consider as junk.
+    """
+    try:
+        files_deleted = 0
+        total_size = 0
+
+        # Walk through the directory and its subdirectories
+        for root, dirs, files in os.walk(directory):
+            for file in files:
+                # Check if the file has a junk extension
+                if any(file.endswith(ext) for ext in file_extensions):
+                    file_path = os.path.join(root, file)  # Corrected path joining
+                    size = os.path.getsize(file_path)
+                    os.remove(file_path)  # Remove the file
+                    files_deleted += 1
+                    total_size += size
+                    logging.info(f"Deleted: {file_path} ({size} bytes)")
+
+        # Log the cleanup result
+        logging.info(f"Cleanup complete: {files_deleted} files deleted, {total_size / 1024:.2f} KB freed.")
+    except Exception as e:
+        logging.error(f"Error during cleanup: {str(e)}")
+
+if __name__ == "__main__":
+    # Configuration
+    target_directory = os.path.join(os.path.expanduser("~"), "Desktop", "JunkFiles")  # Correct directory assumed
+    junk_extensions = [".tmp", ".log", ".bak", ".txt"]  # Extensions to clean
+
+    print("Starting cleanup process...")
+    clean_junk_files(target_directory, junk_extensions)
+    print("Cleanup process completed. Check cleanup_log.txt for details.")
+
+```
+
+<br/> The script has been updated to handle file extensions more reliably. The original version incorrectly checked file extensions, but the fix now uses a more robust approach with any(file.endswith(ext) for ext in file_extensions), which ensures that the script correctly identifies files with the specified extensions, such as .tmp, .log, .bak, and .txt. Additionally, the path joining method has been corrected. The original script used an incorrect method for combining directory and file names, which could lead to errors. This has been resolved by using os.path.join(root, file), ensuring proper handling of file paths. Finally, the issue with leading zero errors in decimal integer literals has been addressed. In Python 3, integers with leading zeros are not allowed unless written in a valid format, like 0o for octal numbers. This error was avoided by ensuring no invalid number literals are used in the script. <br/>
+<br/> Now I will test the new version <br/>
+
+
+
+
+
 <img src=""/>
 <br/> <br/>
 <img src=""/>
