@@ -29,9 +29,10 @@ Documentation: Detailed steps and images will illustrate the process, from creat
 
 <br/> In order to simulate clutter within the virtual enviroment run the script that will generate junk files that can be found under worker_scripts <br/> 
 
-<img src=""/>
-<img src=""/>
-<img src=""/>
+<img src="https://github.com/user-attachments/assets/6a083a4d-81b1-4b25-825d-f91760667001"/>
+<img src="https://github.com/user-attachments/assets/0048ef1f-c4f0-46ab-81cc-6db9d682f6bb"/>
+<br/> Open the newly created folder wihtin the Desktop to confirm <br/>
+<img src="https://github.com/user-attachments/assets/4ad02464-9ea3-4fbf-bc9a-98fcab797394"/>
 <img src=""/>
 <br/> <br/>
 <img src=""/>
