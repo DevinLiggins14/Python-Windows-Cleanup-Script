@@ -85,9 +85,42 @@ if __name__ == "__main__":
 
 ```
 <br/> This cleanup script is designed to identify and delete junk files (like .tmp, .log, .bak, and .txt files) from a specified directory, logging the actions taken. It configures logging to track the cleanup process in a file named cleanup_log.txt, recording the date, log level, and message. The clean_junk_files function takes a directory path and a list of file extensions to look for. It walks through the directory and its subdirectories, checking each file. If a file matches one of the junk extensions, it deletes the file and logs the action, including the file's size. If an error occurs during the cleanup (e.g., permission issues), the script logs the error message. The script sets up the target directory (JunkFiles" folder on the Desktop) and the junk file extensions. It then calls the cleanup function and prints messages to indicate the start and completion of the process. <br/>
-<img src=""/>
-<br/> <br/>
-<img src=""/>
+<br/> Now lets run the script <br/>
+<img src="https://github.com/user-attachments/assets/41ad3aac-2844-456a-8c6c-39dfc784814e"/>
+<br/> Well the script appears to have ran but the "JunkFiles" are still present on the system and also visible on the Desktop. Let me check the cleanup_log.txt to see if there is any insight as to why. <br/>
+<img src="https://github.com/user-attachments/assets/d9a0d1aa-f0d5-4f0a-925b-6952dea15385"/>
+<br/> The error "endswitch first arg must be str or a tuple of str, not list", is related to the line where the script checks if a file ends with one of the specified extensions. The issue happens because file.endswith(file_extensions) is being passed a list (file_extensions), but endswith() expects a string or a tuple of strings, not a list. <br/>
+<br/> To resolve this, I need to change how the endswith() method is used. It should be passed a tuple of file extensions instead of a list. Here's the modified code: <br/>
+
+```py
+def clean_junk_files(directory, file_extensions):
+    """
+    Identify and delete junk files in the specified directory.
+    
+    Args:
+        directory (str): Path to the directory containing junk files.
+        file_extensions (list): List of file extensions to consider as junk.
+    """
+    try:
+        files_deleted = 0
+        total_size = 0
+
+        for root, dirs, files in os.walk(directory):
+            for file in files:
+                if file.endswith(tuple(file_extensions)):  # Fix: Convert list to tuple
+                    file_path = os.path.join(root, file)  # Fix: Use 'root' instead of 'directory' for correct path joining
+                    size = os.path.getsize(file_path)
+                    os.remove(file_path)  # Potential permission issue (ignore for now)
+                    files_deleted += 1
+                    total_size += size
+                    logging.info(f"Deleted: {file_path} ({size} bytes)")
+
+        logging.info(f"Cleanup complete: {files_deleted} files deleted, {total_size / 1024:.2f} KB freed.")
+    except Exception as e:
+        logging.error(f"Error during cleanup: {str(e)}")
+```
+<br/> I updated the line if file.endswith(file_extensions) to if file.endswith(tuple(file_extensions)). This converts the list of extensions to a tuple, which is what endswith() expects. I also updated the line file_path = os.path.join(directory, file) to file_path = os.path.join(root, file) so the full file path is correctly generated. The root variable provides the correct path for each file found during the os.walk() traversal. <br/>
+<br/>  Now I will run the updated script and test it again <br/>
 <img src=""/>
 <img src=""/>
 <img src=""/>
