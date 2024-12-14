@@ -8,7 +8,7 @@ This project demonstrates a Python script designed to clean up unnecessary and j
 <img src=""/>
 <br/>  <br/>
 
-<h2> Services involved: </h2>
+### **Prerequisites**  
 
 | **Service**           | **Purpose**                                                                 |
 |------------------------|-----------------------------------------------------------------------------|
@@ -16,7 +16,6 @@ This project demonstrates a Python script designed to clean up unnecessary and j
 | **Python 3.9+**        | Required to run the cleanup script.                                         |
 | **os & shutil Modules**| Used for file system operations like identifying and deleting files.        |
 | **Custom Junk File Script** | Generates a cluttered environment to simulate real-world conditions.   |
-
 
 
 ## Step 1: Run the junk file script
@@ -28,13 +27,53 @@ Script Development and Testing: The Python cleanup script will be developed and 
 Documentation: Detailed steps and images will illustrate the process, from creating the junk files to running the cleanup script and verifying its success.
 <br/>
 
-<br/> In order to simulate clutter within the virtual enviroment run the <br/> 
+<br/> In order to simulate clutter within the virtual enviroment run the script that will generate junk files that can be found under worker_scripts <br/> 
 
-<p align="center">
-  
-### **Prerequisites**  
-- Have an
-- 
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<br/> <br/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<br/> <br/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<br/> <br/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<br/> <br/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<br/> <br/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<br/> <br/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<br/> <br/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<br/> <br/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<br/> <br/>
 
- ##  Step 1: Create DynamoDB table and Lambda Functions
-<img src="https://github.com/user-attachments/assets/3c73e1c2-8c94-4c32-bb6a-551b915776eb"/>
+
+
