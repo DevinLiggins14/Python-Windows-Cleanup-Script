@@ -33,6 +33,10 @@ Documentation: Detailed steps and images will illustrate the process, from creat
 <img src="https://github.com/user-attachments/assets/0048ef1f-c4f0-46ab-81cc-6db9d682f6bb"/>
 <br/> Open the newly created folder wihtin the Desktop to confirm <br/>
 <img src="https://github.com/user-attachments/assets/4ad02464-9ea3-4fbf-bc9a-98fcab797394"/>
+
+## Step 2: Develop and Debug the Junk File Cleanup Script
+
+
 <img src=""/>
 <br/> <br/>
 <img src=""/>
