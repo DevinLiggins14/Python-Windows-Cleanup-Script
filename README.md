@@ -185,45 +185,9 @@ if __name__ == "__main__":
 
 
 
-
-
-<img src=""/>
-<br/> <br/>
-<img src=""/>
-<img src=""/>
-<img src=""/>
-<img src=""/>
-<br/> <br/>
-<img src=""/>
-<img src=""/>
-<img src=""/>
-<img src=""/>
-<br/> <br/>
-<img src=""/>
-<img src=""/>
-<img src=""/>
-<img src=""/>
-<br/> <br/>
-<img src=""/>
-<img src=""/>
-<img src=""/>
-<img src=""/>
-<br/> <br/>
-<img src=""/>
-<img src=""/>
-<img src=""/>
-<img src=""/>
-<br/> <br/>
-<img src=""/>
-<img src=""/>
-<img src=""/>
-<img src=""/>
-<br/> <br/>
-<img src=""/>
-<img src=""/>
-<img src=""/>
-<img src=""/>
-<br/> <br/>
+https://github.com/user-attachments/assets/b68aa104-7bfd-4bd8-b1e3-cb46b8f0d469
 
 
 
+
+<br/> Sucess! In summary I developed a Python script designed to clean up junk files from a specified directory on a Windows 10 virtual machine. The goal was to identify and delete files with extensions such as .tmp, .log, .bak, and .txt, which can accumulate over time and take up unnecessary disk space. To begin, I created a "JunkFiles" folder on the desktop and generated several junk files for testing purposes. The script was then written to walk through the directory, identify these junk files, and delete them, while logging the actions in a cleanup_log.txt file. During testing, I encountered a few issues, including improper handling of file extensions, incorrect path joining, and a syntax error related to leading zeros in decimal integer literals. After troubleshooting, I fixed the file extension handling by using a more reliable method to check for multiple extensions, corrected the path joining to ensure proper file paths, and addressed the leading zero error by ensuring valid number literals. After making these adjustments, the script ran successfully, deleting the junk files and logging the results as expected. The final version of the script now provides a clean and efficient solution for removing unnecessary files from a system, while also keeping a detailed log of the cleanup process. <br/>
