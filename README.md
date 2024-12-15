@@ -1,7 +1,7 @@
 # Python-Windows-Cleanup-Script
 <h2>Description</h2>
 <br/> 
-This project demonstrates a Python script designed to clean up unnecessary and junk files on a Windows 10 system. The script automates the process of identifying and removing temporary files, logs, and other clutter that can accumulate over time, helping to free up disk space and improve system performance.
+This project demonstrates a Python script designed to clean up unnecessary and junk files on a Windows 10 server The script automates the process of identifying and removing temporary files, logs, and other clutter that can accumulate over time, helping to free up disk space and improve system performance.
 <br />
 <br/> 
 <br/>
