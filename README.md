@@ -123,7 +123,10 @@ def clean_junk_files(directory, file_extensions):
 <br/>  Now I will run the updated script and test it again <br/>
 
 
-<img src="https://github.com/user-attachments/assets/1b03ed2b-119c-4f8f-b8cc-33b1b06ba6dc"/>
+
+
+https://github.com/user-attachments/assets/2ad7673d-5a83-4936-9b1a-2fc486141da7
+
 <br/> The script failed due to handling file extensions and now a syntax error. Will troubleshoot <br/>
 
 ```py
