@@ -5,8 +5,9 @@ This project demonstrates a Python script designed to clean up unnecessary and j
 <br />
 <br/> 
 <br/>
-<img src="https://github.com/user-attachments/assets/fc440a7f-d472-4f02-a3ec-3de0ac0e7a84"/>
-<br/>  <br/>
+
+https://github.com/user-attachments/assets/f4abe32d-5b3f-4575-8c8b-df7001656319
+
 
 ### **Prerequisites**  
 
@@ -21,13 +22,8 @@ This project demonstrates a Python script designed to clean up unnecessary and j
 ## Step 1: Run the junk file script
 
 <br/> 
-Project workflow: 
-Prerequisite Setup: A separate script will be executed to generate junk files within a Windows 10 virtual machine, simulating a cluttered environment for testing.
-Script Development and Testing: The Python cleanup script will be developed and iteratively tested to ensure it identifies and removes the junk files effectively.
-Documentation: Detailed steps and images will illustrate the process, from creating the junk files to running the cleanup script and verifying its success.
-<br/>
-
-<br/> In order to simulate clutter within the virtual enviroment run the script that will generate junk files that can be found under worker_scripts <br/> 
+To simulate a cluttered environment, a separate script will be executed within the Windows 10 server to generate junk files. These files, which can be found under the worker_scripts directory, will serve as the test data for the cleanup process. The Python cleanup script will then be developed and tested iteratively to ensure it identifies and removes these junk files effectively. 
+<br/> 
 
 <img src="https://github.com/user-attachments/assets/6a083a4d-81b1-4b25-825d-f91760667001"/>
 <img src="https://github.com/user-attachments/assets/0048ef1f-c4f0-46ab-81cc-6db9d682f6bb"/>
