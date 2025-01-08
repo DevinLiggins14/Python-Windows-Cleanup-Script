@@ -6,7 +6,11 @@ This project demonstrates a Python script designed to clean up unnecessary and j
 <br/> 
 <br/>
 
-https://github.com/user-attachments/assets/f4abe32d-5b3f-4575-8c8b-df7001656319
+
+
+https://github.com/user-attachments/assets/b13a0465-b5a4-43d4-8965-244f26699f05
+
+
 
 
 ### **Prerequisites**  
@@ -181,7 +185,8 @@ if __name__ == "__main__":
 
 
 
-https://github.com/user-attachments/assets/b68aa104-7bfd-4bd8-b1e3-cb46b8f0d469
+
+https://github.com/user-attachments/assets/1c142b61-f927-4c79-9e24-eba0617c78f9
 
 
 
